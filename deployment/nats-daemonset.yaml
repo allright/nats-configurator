@@ -156,7 +156,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nats-local
+  name: nats
   namespace: nats
 spec:
   ports:
@@ -164,6 +164,5 @@ spec:
       name: nats
       port: 4222
       targetPort: nats
-  internalTrafficPolicy: Local
   selector:
     app: nats-daemonset
